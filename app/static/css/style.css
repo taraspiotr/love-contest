@@ -1,0 +1,45 @@
+div.containter {
+    text-align: center;
+    vertical-align: top;
+    margin-top: 5%;
+}
+
+img.candidate {
+    height: 50%;
+}
+
+#vs {
+    font-size: 50pt;
+    margin: 3%;
+    vertical-align: 250%;
+}
+
+.title {
+    font-size: 50pt;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.subtitle {
+    font-size: 30pt;
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+tr>td {
+    padding-top: 1em;
+  }
+
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.content-section {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+}

@@ -1,0 +1,19 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      {% if title %}
+      <title>{{ title }} - Zawody Miłości</title>
+      {% else %}
+      <title>Zawody Miłości</title>
+      {% endif %}
+    </head>
+    <body>
+        {% if current_user.is_authenticated %}
+        <div style="text-align: center;"><h3><a href="/index">Głosuj</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ranking">Ranking</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout">Logout</a></h3></div>
+        {% else %}
+        <div style="text-align: center;"><h3><a href="/index">Głosuj</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ranking">Ranking</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login">Login</a></h3></div>
+        {% endif %}
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 class="title">Zawody Miłości 006</h1>
+    <h2 class="subtitle">Kto jest milszy?</h1>
+    <div class="containter">
+        <a href="/vote/{{ userA.id }}/{{ userB.id }}/{{ vote_key }}"><img class="candidate floatLeft" src="{{ url_for('static', filename='images/{}'.format(userA.image_name)) }}"></img></a>
+        <span id="vs">czy</span>
+        <a href="/vote/{{ userB.id }}/{{ userA.id }}/{{ vote_key }}"><img class="candidate floatLeft" src="{{ url_for('static', filename='images/{}'.format(userB.image_name)) }}"></img></a>
+    </div>
+{% endblock %}

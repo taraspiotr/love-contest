@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">Ranking Miłości 006</h1>
+<div class="containter">
+    <table style="width: 30%;margin-left:auto;margin-right:auto">
+        <tr style="text-align:left">
+            <th>Miejsce</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Ranking</th>
+        </tr>
+        {% for i, c in users %}
+        <tr>
+            <td>{{ i + 1}}</td>
+            <td>{{ c.first_name }}</td>
+            <td>{{ c.surname }}</td>
+            <td>{{ c.rating }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
